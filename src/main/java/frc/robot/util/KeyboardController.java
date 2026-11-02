@@ -9,6 +9,7 @@ import java.util.Objects;
 import org.wpilib.driverstation.DriverStation;
 import org.wpilib.driverstation.GenericHID;
 import org.wpilib.driverstation.HIDDevice;
+import org.wpilib.driverstation.POVDirection;
 import org.wpilib.util.UsageReporting;
 
 /** Add your docs here. */
@@ -46,7 +47,83 @@ public class KeyboardController implements HIDDevice {
      */
     
     // TODO: Add more functions as needed to make an intuitive "controller"
+    public boolean getRawButtonPressed(int button) {
+        return m_hid.getRawButtonPressed(button);
+    }
+
+    public boolean getRawButton(int button) {
+        return m_hid.getRawButton(button);
+    }
+
+    public boolean getRawButtonReleased(int button) {
+        return m_hid.getRawButtonReleased(button);
+    }
+
+    public boolean getZButtonPressed() {
+        return this.getRawButtonPressed(0);
+    }
+    
     public boolean getZButton() {
-        return m_hid.getRawButton(0);
+        return this.getRawButton(0);
+    }
+
+    public boolean getZButtonReleased() {
+        return this.getRawButtonReleased(0);
+    }
+
+    public boolean getXButtonPressed() {
+        return this.getRawButtonPressed(1);
+    }
+    
+    public boolean getXButton() {
+        return this.getRawButton(1);
+    }
+
+    public boolean getXButtonReleased() {
+        return this.getRawButtonReleased(1);
+    }
+
+    public boolean getCButtonPressed() {
+        return this.getRawButtonPressed(2);
+    }
+    
+    public boolean getCButton() {
+        return this.getRawButton(2);
+    }
+
+    public boolean getCButtonReleased() {
+        return this.getRawButtonReleased(2);
+    }
+
+    public boolean getVButtonPressed() {
+        return this.getRawButtonPressed(3);
+    }
+    
+    public boolean getVButton() {
+        return this.getRawButton(3);
+    }
+
+    public boolean getVButtonReleased() {
+        return this.getRawButtonReleased(3);
+    }
+
+    public POVDirection getPOV() {
+        return m_hid.getPOV();
+    }
+
+    public double getRawAxis(int axis) {
+        return m_hid.getRawAxis(axis);
+    }
+
+    public double getADAxis() {
+        return this.getRawAxis(0);
+    }
+
+    public double getWSAxis() {
+        return this.getRawAxis(1);
+    }
+
+    public double getERAxis() {
+        return this.getRawAxis(2);
     }
 }
