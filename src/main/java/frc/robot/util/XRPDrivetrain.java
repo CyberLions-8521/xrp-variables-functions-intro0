@@ -49,8 +49,8 @@ public class XRPDrivetrain {
   private XRPDrivetrain() {
     m_gyro.reset();
     // Use inches as unit for encoder distances
-    m_leftEncoder.setDistancePerPulse((Math.PI * kWheelDiameterInch) / kCountsPerRevolution);
-    m_rightEncoder.setDistancePerPulse((Math.PI * kWheelDiameterInch) / kCountsPerRevolution);
+    // m_leftEncoder.setDistancePerPulse((Math.PI * kWheelDiameterInch) / kCountsPerRevolution);
+    // m_rightEncoder.setDistancePerPulse((Math.PI * kWheelDiameterInch) / kCountsPerRevolution);
     resetEncoders();
 
     // Invert right side since motor is flipped
@@ -66,11 +66,11 @@ public class XRPDrivetrain {
     m_rightEncoder.reset();
   }
 
-  public double getLeftDistanceInch() {
+  public double getLeftDistance() {
     return m_leftEncoder.getDistance();
   }
 
-  public double getRightDistanceInch() {
+  public double getRightDistance() {
     return m_rightEncoder.getDistance();
   }
 
