@@ -17,13 +17,11 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     // TODO: Replace this code or delete it altogether for the training
-    driveForward();
-    
-    stop();
-
-    driveReverse();
-
-    drive(0.0, 0.5);
+    if (getZButton()) {
+      driveForward();
+    } else {
+      stop();
+    }
   }
 
 
