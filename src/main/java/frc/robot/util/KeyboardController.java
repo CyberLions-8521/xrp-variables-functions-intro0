@@ -39,6 +39,10 @@ public class KeyboardController implements HIDDevice {
      * ER - Axis 2
      * NUMPAD - POV[0]
      * ZXCV - Buttons 0 through 3
+     * 
+     * To make buttons correspond to a joystick, you must edit the values
+     * within simgui-ds.json.  The values of each key correspond to those
+     * found at https://oprypin.github.io/crystal-imgui/ImGui/ImGuiKey.html
      */
     
     // TODO: Add more functions as needed to make an intuitive "controller"
