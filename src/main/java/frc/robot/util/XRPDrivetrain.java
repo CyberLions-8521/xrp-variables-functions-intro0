@@ -4,12 +4,12 @@
 
 package frc.robot.util;
 
-import edu.wpi.first.wpilibj.Encoder;
-import edu.wpi.first.wpilibj.drive.DifferentialDrive;
-import edu.wpi.first.wpilibj.xrp.XRPGyro;
-import edu.wpi.first.wpilibj.xrp.XRPMotor;
-import edu.wpi.first.wpilibj.xrp.XRPRangefinder;
-import edu.wpi.first.wpilibj.xrp.XRPServo;
+import org.wpilib.hardware.rotation.Encoder;
+import org.wpilib.drive.DifferentialDrive;
+import org.wpilib.xrp.XRPGyro;
+import org.wpilib.xrp.XRPMotor;
+import org.wpilib.xrp.XRPRangefinder;
+import org.wpilib.xrp.XRPServo;
 
 public class XRPDrivetrain {
   private static final double kGearRatio =

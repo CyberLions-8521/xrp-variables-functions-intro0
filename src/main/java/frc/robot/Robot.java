@@ -4,7 +4,7 @@
 
 package frc.robot;
 
-import edu.wpi.first.wpilibj.TimedRobot;
+import org.wpilib.framework.TimedRobot;
 import frc.robot.util.KeyboardController;
 import frc.robot.util.XRPDrivetrain;
 
