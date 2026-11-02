@@ -47,6 +47,6 @@ public class KeyboardController implements HIDDevice {
     
     // TODO: Add more functions as needed to make an intuitive "controller"
     public boolean getZButton() {
-        return m_hid.getRawButton(1);
+        return m_hid.getRawButton(0);
     }
 }
