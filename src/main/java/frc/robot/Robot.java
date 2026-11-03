@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import frc.robot.util.KeyboardController;
 import frc.robot.util.XRPDrivetrain;
 
+
 public class Robot extends TimedRobot {
   @Override
   public void teleopInit() {
@@ -16,14 +17,6 @@ public class Robot extends TimedRobot {
 
   @Override
   public void teleopPeriodic() {
-    // TODO: Replace this code or delete it altogether for the training
-    driveForward();
-    
-    stop();
-
-    driveReverse();
-
-    drive(0.0, 0.5);
   }
 
 
@@ -59,12 +52,18 @@ public class Robot extends TimedRobot {
 
 
 
+/*
+If you are reading this, Congrats you have found the actucal functions for the robot.
+This section was moved to the bottom of the file to make it less confusing for new programmers
+However, if you wish to see the real code then be my guest. Look through it!
+Check the functions and see what they do. If you want to change the robot's behavior, this is the place to do it.
+If you want to learn more about how a XRP actually works, check out the XRPDrivetrain.java file in the util folder. 
+It has all the code for the drivetrain and other sensors.
+*/
+
+// ================ DRIVE FUNCTIONS ========================
 
 
-
-
-
-  // TODO: Add more functions as needed
   private void drive(double speed, double turn) {
     XRPDrivetrain.getInstance().arcadeDrive(speed, turn);
   }
@@ -81,8 +80,69 @@ public class Robot extends TimedRobot {
     drive(0, 0);
   }
 
-  // Controller functions
+  // ================ CONTROLLER FUNCTIONS ========================
+  private boolean getZButtonPressed() {
+      return KeyboardController.getInstance().getRawButtonPressed(0);
+  }
+  
   private boolean getZButton() {
     return KeyboardController.getInstance().getZButton();
   }
+
+  private boolean getZButtonReleased() {
+      return KeyboardController.getInstance().getRawButtonReleased(0);
+  }
+
+  private boolean getXButtonPressed() {
+      return KeyboardController.getInstance().getRawButtonPressed(1);
+  }
+  
+  private boolean getXButton() {
+      return KeyboardController.getInstance().getRawButton(1);
+  }
+
+  private boolean getXButtonReleased() {
+      return KeyboardController.getInstance().getRawButtonReleased(1);
+  }
+
+  private boolean getCButtonPressed() {
+      return KeyboardController.getInstance().getRawButtonPressed(2);
+  }
+  
+  private boolean getCButton() {
+      return KeyboardController.getInstance().getRawButton(2);
+  }
+
+  private boolean getCButtonReleased() {
+      return KeyboardController.getInstance().getRawButtonReleased(2);
+  }
+
+  private boolean getVButtonPressed() {
+      return KeyboardController.getInstance().getRawButtonPressed(3);
+  }
+  
+  private boolean getVButton() {
+      return KeyboardController.getInstance().getRawButton(3);
+  }
+
+  private boolean getVButtonReleased() {
+      return KeyboardController.getInstance().getRawButtonReleased(3);
+  }
+
+  private int getPOV() {
+    return KeyboardController.getInstance().getPOV();
+  }
+
+  private double getADAxis() {
+      return KeyboardController.getInstance().getRawAxis(0);
+  }
+
+  private double getWSAxis() {
+      return KeyboardController.getInstance().getRawAxis(1);
+  }
+
+  private double getERAxis() {
+      return KeyboardController.getInstance().getRawAxis(2);
+  }
+
 }

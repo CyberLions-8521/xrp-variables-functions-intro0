@@ -9,6 +9,7 @@ import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.xrp.XRPGyro;
 import edu.wpi.first.wpilibj.xrp.XRPMotor;
 import edu.wpi.first.wpilibj.xrp.XRPRangefinder;
+import edu.wpi.first.wpilibj.xrp.XRPReflectanceSensor;
 import edu.wpi.first.wpilibj.xrp.XRPServo;
 
 public class XRPDrivetrain {
@@ -21,8 +22,8 @@ public class XRPDrivetrain {
   private final XRPGyro m_gyro = new XRPGyro();
   private final XRPServo m_servo = new XRPServo(4);
   private final XRPRangefinder m_range = new XRPRangefinder();
+  private final XRPReflectanceSensor m_reflectance = new XRPReflectanceSensor();
 
-  // TODO: Add line follower
 
   // The XRP has the left and right motors set to
   // channels 0 and 1 respectively
@@ -77,6 +78,19 @@ public class XRPDrivetrain {
   public double getAngle() {
     return m_gyro.getAngle();
   }
+  //-- Sensor Functions Added --
 
-  // TODO: Add functions for other sensors (line follower, ultrasonic, etc.)
+  public double getDistanceInches() {
+    return m_range.getDistanceInches();
+  }
+  public double getDistanceMeters() {
+    return m_range.getDistanceMeters();
+  }
+  public double getLeftReflectance() {
+    return m_reflectance.getLeftReflectanceValue();
+  }
+    public double getRightReflectance() {
+    return m_reflectance.getRightReflectanceValue();
+  }
+
 }
