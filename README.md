@@ -55,9 +55,21 @@ The Project should have the following:
         - Returns whether the Z Key on the Keyboard was pressed
     - Any of the Previous Commands
         - **NOTE** The One Active Wins!
-    - ` if (KeyboardFunction()) { CommandFunction(); }` 
+    - ```java
+      if (KeyboardFunction()) {
+        CommandFunction();
+      }
+      ``` 
         - if something happens => Do That!
-    - ` if (?) { ? } else if () { ? } else { ? } ` 
+    - ```java
+      if (?) {
+        ?
+      } else if () {
+        ?
+      } else {
+        ?
+      }
+      ``` 
         - if something happens => Do That! but if something didn't happen but something else=> Do Other! => If something never happened => Do This!
   * Overall Goal: 
     - Use the if statement to be able to Press a Button, that makes the robot do something!
@@ -65,6 +77,37 @@ The Project should have the following:
  *  Make it Fully Controlable (Buttons that goes Forward, turn left, turn right, Backward)
  *  Do a Little Dance on Command! (Spin in a Circle!)
  *  Lowkey a Super Challenge for this Workshop (Make the Robot do a Square Rotation!) **NOTE** You are going to need to look through XRPDriveTrain and ask what does a Encoder do.
+
+### Additional Functions
+| Method Signature | Description |
+|---|---|
+| `resetEncoders()` | Resets both left and right drive encoders to zero. |
+| `getLeftDistanceInch()` | Returns the distance tracked by the left wheel encoder in inches. |
+| `getRightDistanceInch()` | Returns the distance tracked by the right wheel encoder in inches. |
+| `getHeading()` | Returns the current robot orientation/heading angle from the gyro in degrees. |
+| `resetGyro()` | Resets the gyro heading value to zero. |
+| `getServoPosition()` | Returns the current position of the servo motor between `0.0` and `1.0`. |
+| `setServoPosition(double pos)` | Moves the servo to the given position between `0.0` and `1.0`. |
+| `getUltrasonicInches()` | Returns the distance measured by the ultrasonic distance sensor in inches. |
+| `getUltrasonicMeters()` | Returns the distance measured by the ultrasonic distance sensor in meters. |
+| `getLeftReflectance()` | Returns the light reflectance reading from the left reflectance sensor. |
+| `getRightReflectance()` | Returns the light reflectance reading from the right reflectance sensor. |
+| `getZButtonPressed()` | Returns `true` if the 'Z' key/button was just pressed down this frame. |
+| `getZButton()` | Returns `true` continuously while the 'Z' key/button is held down. |
+| `getZButtonReleased()` | Returns `true` if the 'Z' key/button was just released this frame. |
+| `getXButtonPressed()` | Returns `true` if the 'X' key/button was just pressed down this frame. |
+| `getXButton()` | Returns `true` continuously while the 'X' key/button is held down. |
+| `getXButtonReleased()` | Returns `true` if the 'X' key/button was just released this frame. |
+| `getCButtonPressed()` | Returns `true` if the 'C' key/button was just pressed down this frame. |
+| `getCButton()` | Returns `true` continuously while the 'C' key/button is held down. |
+| `getCButtonReleased()` | Returns `true` if the 'C' key/button was just released this frame. |
+| `getVButtonPressed()` | Returns `true` if the 'V' key/button was just pressed down this frame. |
+| `getVButton()` | Returns `true` continuously while the 'V' key/button is held down. |
+| `getVButtonReleased()` | Returns `true` if the 'V' key/button was just released this frame. |
+| `getPOV()` | Returns the D-pad/POV angle value from the controller in degrees. |
+| `getADAxis()` | Returns the value of the A/D key axis (typically horizontal steering input). |
+| `getWSAxis()` | Returns the value of the W/S key axis (typically vertical throttle input). |
+| `getERAxis()` | Returns the value of the E/R key axis (typically secondary controller axis input). |
 
 
 

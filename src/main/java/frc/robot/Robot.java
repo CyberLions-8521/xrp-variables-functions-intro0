@@ -80,6 +80,51 @@ It has all the code for the drivetrain and other sensors.
     drive(0, 0);
   }
 
+  // ================ ROBOT SENSOR FUNCTIONS ======================
+  private void resetEncoders() {
+    XRPDrivetrain.getInstance().resetEncoders();
+  }
+
+  private double getLeftDistanceInch() {
+    return XRPDrivetrain.getInstance().getLeftDistanceInch();
+  }
+
+  private double getRightDistanceInch() {
+    return XRPDrivetrain.getInstance().getRightDistanceInch();
+  }
+
+  private double getHeading() {
+    return XRPDrivetrain.getInstance().getHeading();
+  }
+
+  private void resetGyro() {
+    XRPDrivetrain.getInstance().resetGyro();
+  }
+  
+  private double getServoPosition() {
+    return XRPDrivetrain.getInstance().getServoPosition();
+  }
+
+  public void setServoPosition(double pos) {
+    XRPDrivetrain.getInstance().setServoPosition(pos);
+  }
+
+  private double getUltrasonicInches() {
+    return XRPDrivetrain.getInstance().getDistanceInches();
+  }
+
+  private double getUltrasonicMeters() {
+    return XRPDrivetrain.getInstance().getDistanceMeters();
+  }
+
+  private double getLeftReflectance() {
+    return XRPDrivetrain.getInstance().getLeftReflectance();
+  }
+
+  private double getRightReflectance() {
+    return XRPDrivetrain.getInstance().getRightReflectance();
+  }
+
   // ================ CONTROLLER FUNCTIONS ========================
   private boolean getZButtonPressed() {
       return KeyboardController.getInstance().getRawButtonPressed(0);

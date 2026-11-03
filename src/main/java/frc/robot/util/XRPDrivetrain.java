@@ -75,10 +75,21 @@ public class XRPDrivetrain {
     return m_rightEncoder.getDistance();
   }
 
-  public double getAngle() {
+  public double getHeading() {
     return m_gyro.getAngle();
   }
-  //-- Sensor Functions Added --
+
+  public void resetGyro() {
+    m_gyro.reset();
+  }
+
+  public double getServoPosition() {
+    return m_servo.getPosition();
+  }
+
+  public void setServoPosition(double pos) {
+    m_servo.setPosition(pos);
+  }
 
   public double getDistanceInches() {
     return m_range.getDistanceInches();
