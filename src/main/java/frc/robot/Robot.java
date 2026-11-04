@@ -127,51 +127,51 @@ It has all the code for the drivetrain and other sensors.
 
   // ================ CONTROLLER FUNCTIONS ========================
   private boolean getZButtonPressed() {
-      return KeyboardController.getInstance().getRawButtonPressed(0);
-  }
-  
-  private boolean getZButton() {
-    return KeyboardController.getInstance().getZButton();
-  }
-
-  private boolean getZButtonReleased() {
-      return KeyboardController.getInstance().getRawButtonReleased(0);
-  }
-
-  private boolean getXButtonPressed() {
       return KeyboardController.getInstance().getRawButtonPressed(1);
   }
   
-  private boolean getXButton() {
-      return KeyboardController.getInstance().getRawButton(1);
+  private boolean getZButton() {
+    return KeyboardController.getInstance().getRawButtonPressed(1);
   }
 
-  private boolean getXButtonReleased() {
+  private boolean getZButtonReleased() {
       return KeyboardController.getInstance().getRawButtonReleased(1);
   }
 
-  private boolean getCButtonPressed() {
+  private boolean getXButtonPressed() {
       return KeyboardController.getInstance().getRawButtonPressed(2);
   }
   
-  private boolean getCButton() {
+  private boolean getXButton() {
       return KeyboardController.getInstance().getRawButton(2);
   }
 
-  private boolean getCButtonReleased() {
+  private boolean getXButtonReleased() {
       return KeyboardController.getInstance().getRawButtonReleased(2);
   }
 
-  private boolean getVButtonPressed() {
+  private boolean getCButtonPressed() {
       return KeyboardController.getInstance().getRawButtonPressed(3);
   }
   
-  private boolean getVButton() {
+  private boolean getCButton() {
       return KeyboardController.getInstance().getRawButton(3);
   }
 
-  private boolean getVButtonReleased() {
+  private boolean getCButtonReleased() {
       return KeyboardController.getInstance().getRawButtonReleased(3);
+  }
+
+  private boolean getVButtonPressed() {
+      return KeyboardController.getInstance().getRawButtonPressed(4);
+  }
+  
+  private boolean getVButton() {
+      return KeyboardController.getInstance().getRawButton(4);
+  }
+
+  private boolean getVButtonReleased() {
+      return KeyboardController.getInstance().getRawButtonReleased(4);
   }
 
   private int getPOV() {
