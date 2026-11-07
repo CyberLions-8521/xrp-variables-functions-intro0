@@ -131,7 +131,7 @@ It has all the code for the drivetrain and other sensors.
   }
   
   private boolean getZButton() {
-    return KeyboardController.getInstance().getRawButtonPressed(1);
+    return KeyboardController.getInstance().getRawButton(1);
   }
 
   private boolean getZButtonReleased() {
