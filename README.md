@@ -1,14 +1,18 @@
-#  🤖 XRP INTRO Day 0 🤖
+#  🤖 **XRP INTRO Day 1** (11/10) 🤖
+## **Quick Note**
+  Dear Programmers! I apologize that I can't make it to today's workshop to see your wonderful hands work. However, you have other mentors such as Ethan Nguyen , Mr. Vu, and Mr. Schrier to help you if you need. This Workshop will be what I dub, a freelancer's Workshop where you are free to hop onto any of the challenges we have set for you! 
+   -- Kevin On
 ## **Project Goal:**
-  Preparing a XRP to be driven and controled in Java using the WPIlib IDE.
-The Project should have the following: 
-* A working XRP
-* Connected to a PC
-* Drivable 
-* Controlable
+  * A Branch on Github with your Code!
+  * Any of the Challenges completed!
+  * Whatever You Desire from XRPs with the Starter Code
+    - Fully Driveable (Good!)
+    - JoyStick Compitable (Impressive!)
+    - Encoders (Next Level Stuff!)
+
 
 ## WORKSHOP 
-  ### Prerequisites (Only if you aren't on Github but this is a readme so uh for docs purposes O_O )
+  ### Prerequisites (Reminder from Last Workshop on Thursday)
   *  LOG INTO GITHUB
     - https://github.com/   
         - Don't Have One? Make One!
@@ -22,92 +26,99 @@ The Project should have the following:
     - Click on the GREEN Button called `<>Code`
     - Underneath Clone:
         - Copy the HTTPS using the Copy Button (Two Squares)
-        https://github.com/CyberLions-8521/xrp-variables-functions-intro0.git
-    - Go to WPILib 
-        - In Explorer there should be a button called Clone Repository
-        - Click it and Paste the link into the top of the search bar
+        - https://github.com/CyberLions-8521/xrp-variables-functions-intro0.git
+    - Go to WPILib (Make sure that there is a red and white logo in the top right (We are not using base VSCODE))
+        - In Explorer (Two Papers) there should be a button called Clone Repository
+        - Click it and Paste HTTPS from before into the top of the search bar
         - Enter and Wait! (It needs to Load ^-^)
-  ### Task 1: WROOM WROOM
-  * Use the Following: 
-    - `driveForward();` 
-        - Drives the XRP in the Forward Direction at a Speed of 0.75
-    - `driveReverse();`
-        - Drives the XRP in the Reverse Direction at a Speed of 0.75
-* Overall Goal:
-    - Use Drive Commands to drive the XRP in a direction.
-    - **NOTE** The Last One Standing Wins!
-### Task 2: JAY YOU GOTTA MOVE
-  * Use the Following: 
-    - `driveForward();` 
-        - Drives the XRP in the Forward Direction at a Speed of 0.75
-    - `driveReverse();`
-        - Drives the XRP in the Reverse Direction at a Speed of 0.75
-    - `drive(double speed, double turn);`
-        - Drives the XRP at a Given Direction at a Given Turn Given the Speed and Turn
-    - `stop();`
-        - Stops the XRP 
-* Overall Goal:
-    - Use `drive(?, ?);` to turn the Robot in a Direction.
-    - **NOTE** if Forward is Positive, what is Backwards?
-### Task 3: LET ME TAKE THE WHEEL
-  * Use the Following: 
-    - Use `getZButton()`
-        - Returns whether the Z Key on the Keyboard was pressed
-    - Any of the Previous Commands
-        - **NOTE** The One Active Wins!
-    - ```java
-      if (KeyboardFunction()) {
-        CommandFunction();
-      }
-      ``` 
-        - if something happens => Do That!
-    - ```java
-      if (?) {
-        ?
-      } else if () {
-        ?
-      } else {
-        ?
-      }
-      ``` 
-        - if something happens => Do That! but if something didn't happen but something else=> Do Other! => If something never happened => Do This!
-  * Overall Goal: 
-    - Use the if statement to be able to Press a Button, that makes the robot do something!
-### Challenges!
- *  Make it Fully Controlable (Buttons that goes Forward, turn left, turn right, Backward)
- *  Do a Little Dance on Command! (Spin in a Circle!)
- *  Lowkey a Super Challenge for this Workshop (Make the Robot do a Square Rotation!) **NOTE** You are going to need to look through XRPDriveTrain and ask what does a Encoder do.
+    ### Github Branches!
+    - New Stuff (IF you want to save your code for a later date and also practice for when you work with github!):
+      - Create a Branch and Save Code! (2 Methods -> Github Way vs Git Way)
+        - Github Way:
+          - Make a Branch in Github
+            - Click on the "main button" this shows the current branch you are looking at. Please do not commit to main, if you do we can always revert so its ok. 
+            - Click on View All Branches 
+            - Click on the GREEN "New Branch" Button
+            - Name and select your Source Code (The Code your branch orginates from) (Put a conventional Name like Name-2026 or Name-Main)
+            - In your WPILIB, go to terminal (if its not up -> top right with the square that has a line on its bottom)
+            - If you can't edit in it, press the + to open another terminal or delete using the trashcan and reopen it.
+            - Input `git fetch origin` Enter (Syncs Github to your Terminal)
+            - Input `git switch <branch-name>` (switches to your created branch)
+        - Git Way:
+            - `git switch -c <branch-name>` (-c means to create and you switch to your branch)
+            - `git push -u origin <branch-name>` (pushes it to your branch on the repo)
+        - Commiting
+            - Input `git add .` or `git add --all` (To stage all your changes)
+            - Input `git commit -m "your message"` (To commit your changes, add a message like what did you do (Be a little profesh))
+            - Input `git push` (Sends that Baby to your branch!)
+            - `git branch` to check if you are on that branch :)
 
-### Additional Functions
-| Method Signature | Description |
-|---|---|
-| `resetEncoders()` | Resets both left and right drive encoders to zero. |
-| `getLeftDistanceInch()` | Returns the distance tracked by the left wheel encoder in inches. |
-| `getRightDistanceInch()` | Returns the distance tracked by the right wheel encoder in inches. |
-| `getHeading()` | Returns the current robot orientation/heading angle from the gyro in degrees. |
-| `resetGyro()` | Resets the gyro heading value to zero. |
-| `getServoPosition()` | Returns the current position of the servo motor between `0.0` and `1.0`. |
-| `setServoPosition(double pos)` | Moves the servo to the given position between `0.0` and `1.0`. |
-| `getUltrasonicInches()` | Returns the distance measured by the ultrasonic distance sensor in inches. |
-| `getUltrasonicMeters()` | Returns the distance measured by the ultrasonic distance sensor in meters. |
-| `getLeftReflectance()` | Returns the light reflectance reading from the left reflectance sensor. |
-| `getRightReflectance()` | Returns the light reflectance reading from the right reflectance sensor. |
-| `getZButtonPressed()` | Returns `true` if the 'Z' key/button was just pressed down this frame. |
-| `getZButton()` | Returns `true` continuously while the 'Z' key/button is held down. |
-| `getZButtonReleased()` | Returns `true` if the 'Z' key/button was just released this frame. |
-| `getXButtonPressed()` | Returns `true` if the 'X' key/button was just pressed down this frame. |
-| `getXButton()` | Returns `true` continuously while the 'X' key/button is held down. |
-| `getXButtonReleased()` | Returns `true` if the 'X' key/button was just released this frame. |
-| `getCButtonPressed()` | Returns `true` if the 'C' key/button was just pressed down this frame. |
-| `getCButton()` | Returns `true` continuously while the 'C' key/button is held down. |
-| `getCButtonReleased()` | Returns `true` if the 'C' key/button was just released this frame. |
-| `getVButtonPressed()` | Returns `true` if the 'V' key/button was just pressed down this frame. |
-| `getVButton()` | Returns `true` continuously while the 'V' key/button is held down. |
-| `getVButtonReleased()` | Returns `true` if the 'V' key/button was just released this frame. |
-| `getPOV()` | Returns the D-pad/POV angle value from the controller in degrees. |
-| `getADAxis()` | Returns the value of the A/D key axis (typically horizontal steering input). |
-| `getWSAxis()` | Returns the value of the W/S key axis (typically vertical throttle input). |
-| `getERAxis()` | Returns the value of the E/R key axis (typically secondary controller axis input). |
+### Challenges!
+  - Insert Challenges (Brainstorm a little more)
+
+
+##  Drive Functions
+
+Functions used to control the movement of the robot.
+
+| Function | Parameters | Return Type | Description |
+| :--- | :--- | :--- | :--- |
+| `drive(speed, turn)` | `double speed`, `double turn` | `void` | Moves the robot using arcade drive. `speed` controls forward/backward (-1.0 to 1.0) and `turn` controls rotation (-1.0 to 1.0). |
+| `driveForward()` | *None* | `void` | Drives the robot straight forward at 75% speed. |
+| `driveReverse()` | *None* | `void` | Drives the robot straight backward at 75% speed. |
+| `stop()` | *None* | `void` | Stops all drivetrain movement immediately. |
+
+---
+
+## Sensor & Actuator Functions
+
+Functions used to read telemetry from sensors or control actuators (servos).
+
+| Function | Parameters | Return Type | Description |
+| :--- | :--- | :--- | :--- |
+| `resetEncoders()` | *None* | `void` | Resets the wheel encoders back to zero. |
+| `getLeftDistanceInch()` | *None* | `double` | Gets total distance traveled by the left wheel in inches. |
+| `getRightDistanceInch()` | *None* | `double` | Gets total distance traveled by the right wheel in inches. |
+| `getHeading()` | *None* | `double` | Returns the current gyro heading angle in degrees. |
+| `resetGyro()` | *None* | `void` | Resets the gyro angle reading back to 0 degrees. |
+| `getServoPosition()` | *None* | `double` | Returns the current position of the connected servo. |
+| `setServoPosition(pos)` | `double pos` | `void` | Sets the servo position (`0.0` to `1.0`). |
+| `getUltrasonicInches()` | *None* | `double` | Reads the distance from the ultrasonic sensor in inches. |
+| `getUltrasonicMeters()` | *None* | `double` | Reads the distance from the ultrasonic sensor in meters. |
+| `getLeftReflectance()` | *None* | `double` | Reads the light reflectance value from the left line-following sensor. |
+| `getRightReflectance()` | *None* | `double` | Reads the light reflectance value from the right line-following sensor. |
+
+---
+
+## Keyboard Controller Functions
+
+Functions used to capture keypresses and joystick input from the keyboard controller.
+
+### Action Buttons (Z, X, C, V)
+
+| Function | Parameters | Return Type | Description |
+| :--- | :--- | :--- | :--- |
+| `getZButtonPressed()` | *None* | `boolean` | `true` only on the initial frame when **Z** key is pressed down. |
+| `getZButton()` | *None* | `boolean` | `true` as long as the **Z** key is held down. |
+| `getZButtonReleased()` | *None* | `boolean` | `true` only on the frame when **Z** key is released. |
+| `getXButtonPressed()` | *None* | `boolean` | `true` only on the initial frame when **X** key is pressed down. |
+| `getXButton()` | *None* | `boolean` | `true` as long as the **X** key is held down. |
+| `getXButtonReleased()` | *None* | `boolean` | `true` only on the frame when **X** key is released. |
+| `getCButtonPressed()` | *None* | `boolean` | `true` only on the initial frame when **C** key is pressed down. |
+| `getCButton()` | *None* | `boolean` | `true` as long as the **C** key is held down. |
+| `getCButtonReleased()` | *None* | `boolean` | `true` only on the frame when **C** key is released. |
+| `getVButtonPressed()` | *None* | `boolean` | `true` only on the initial frame when **V** key is pressed down. |
+| `getVButton()` | *None* | `boolean` | `true` as long as the **V** key is held down. |
+| `getVButtonReleased()` | *None* | `boolean` | `true` only on the frame when **V** key is released. |
+
+### Analog Axes & D-Pad
+
+| Function | Parameters | Return Type | Description |
+| :--- | :--- | :--- | :--- |
+| `getWSAxis()` | *None* | `double` | Returns axis value for **W** (forward) / **S** (reverse) keys (`-1.0` to `1.0`). |
+| `getADAxis()` | *None* | `double` | Returns axis value for **A** (left) / **D** (right) keys (`-1.0` to `1.0`). |
+| `getERAxis()` | *None* | `double` | Returns axis value for **E** / **R** keys (`-1.0` to `1.0`). |
+| `getPOV()` | *None* | `int` | Returns the current POV angle in degrees (e.g., `0`, `90`, `180`, `270`), or `-1` if centered. |
 
 
 
