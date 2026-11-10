@@ -6,10 +6,10 @@
   * A Branch on Github with your Code!
   * Any of the Challenges completed!
   * Whatever You Desire from XRPs with the Starter Code
-    - Fully Driveable (Good!)
-    - JoyStick Compitable (Impressive!)
-    - Encoders (Next Level Stuff!)
-
+    - Fully Controlled (Pro)
+    - Encoders (Hacker)
+    - Functions (God)
+  
 
 ## WORKSHOP 
   ### Prerequisites (Reminder from Last Workshop on Thursday)
@@ -39,7 +39,7 @@
             - Click on the "main button" this shows the current branch you are looking at. Please do not commit to main, if you do we can always revert so its ok. 
             - Click on View All Branches 
             - Click on the GREEN "New Branch" Button
-            - Name and select your Source Code (The Code your branch orginates from) (Put a conventional Name like Name-2026 or Name-Main)
+            - Name and select your Source Code (The Code your branch originates from) (Put a conventional Name like Name-2026 or Name-Main)
             - In your WPILIB, go to terminal (if its not up -> top right with the square that has a line on its bottom)
             - If you can't edit in it, press the + to open another terminal or delete using the trashcan and reopen it.
             - Input `git fetch origin` Enter (Syncs Github to your Terminal)
@@ -47,15 +47,39 @@
         - Git Way:
             - `git switch -c <branch-name>` (-c means to create and you switch to your branch)
             - `git push -u origin <branch-name>` (pushes it to your branch on the repo)
-        - Commiting
+        - Commit
             - Input `git add .` or `git add --all` (To stage all your changes)
             - Input `git commit -m "your message"` (To commit your changes, add a message like what did you do (Be a little profesh))
             - Input `git push` (Sends that Baby to your branch!)
             - `git branch` to check if you are on that branch :)
 
 ### Challenges!
-  - Insert Challenges (Brainstorm a little more)
-
+  - **Fully controllable using Keyboard Controls or WASD Functions (See Code Logic Below)**
+     ```java
+      if (getZButton()) {
+        driveForward();
+      } else if (getXButton()) {
+        driveReverse();
+      } else {
+        stop();
+      }
+  - if something happens => do that thing else do something else
+    - You can chain these using else if and a boolean statement aka true or false
+    - if you are thinking about using WASD functions using lesser / greater than < or >, because W = positive and S = negative
+    - See Functions Below
+  - **Drive to a certain distance using 👻 MATH 👻**
+    - Using Encoders aka a built in distance tracker within in the XRP
+    - Use `resetEncoders()` when you want to reset the distance  
+    - Use `getLeftDistanceInch()` or `getRightLeftDistance()` to get the distances in inches
+    - Use a if statement to stop the Robot at a certain distance
+  - **Make it do a little dance using one Line!**
+    - String up a several lines of code and put it into a function!
+    ```java 
+      private void FunctionName() {
+        // Insert your Code!
+      }
+  - a Function condenses your Code into a singular line and can be called through `FunctionName();`
+  - This will call that function and whatever inside of it!
 
 ##  Drive Functions
 
